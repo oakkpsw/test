@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  nestjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    ports:
+      - '3000:3000'
+    depends_on:
+      - sql-server
+    networks:
+      - app-network
+ 
+
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: p@ssw0rd
+      ACCEPT_EULA: Y
+    ports:
+      - '1433:1433'
+    networks:
+      - app-network
+  
+networks:
+    app-network:
+      driver: bridge
