@@ -11,9 +11,7 @@ interface PostForm {
   body: string
 }
 
-// interface UserInterface {
-//   userId: number
-// }
+
 const CreatePost = () => {
   const navigate = useNavigate()
   const { register, handleSubmit } = useForm<PostForm>()
@@ -65,15 +63,7 @@ const CreatePost = () => {
           Create Post
         </Typography>
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* <TextField
-            name="userId"
-            label="User ID"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-            {...register("name")}
-            required
-          /> */}
+     
           <TextField
             label="Title"
             variant="outlined"

@@ -23,12 +23,10 @@ interface User {
 }
 
 const ProfilePage = () => {
-//   const navigate = useNavigate()
   const [user, setUser] = useState<User | null>()
 
   const getData = async (userId: number) => {
     try {
-      // setLoading(true)
       const db_url = "/users/db/"
       const response = await axiosInstance.get(db_url + userId)
       setUser(response.data)

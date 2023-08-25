@@ -25,7 +25,6 @@ const UsersList = () => {
   const navigate = useNavigate()
   const getData = async () => {
     try {
-      // setLoading(true)
       // const url = "https://jsonplaceholder.typicode.com/users"
       const db_url = "/users/db/"
       const response = await axiosInstance.get(db_url)

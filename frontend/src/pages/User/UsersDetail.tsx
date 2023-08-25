@@ -34,9 +34,7 @@ const UsersDetail = () => {
   const [dialogSuccess, setDialogSuccess] = useState(true)
   const getData = async (id: number) => {
     try {
-      // setLoading(true)
       const db_url = "/users/db/"
-    //   const url = "https://jsonplaceholder.typicode.com/posts/"
       const response = await axiosInstance.get(db_url + id)
       setUser(response.data)
     } catch (error) {
@@ -45,10 +43,8 @@ const UsersDetail = () => {
   }
 
   const handleDelete = async (id: number) => {
-    //  event.preventDefault()
     // const url = `https://jsonplaceholder.typicode.com/posts/${id}`
     const db_url = `/users/db/${id}`
-    //  const data = { ...formData }
     try {
       const response = await axiosInstance.delete(db_url)
       if (response.status === 200) {

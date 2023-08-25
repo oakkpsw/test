@@ -5,7 +5,6 @@ import CreateButton from "../../components/CreateButton"
 import DataGrid from "../../components/DataGrid"
 import Paging from "../../components/Paging"
 import { useNavigate } from "react-router-dom"
-// import axios from "axios"
 import axiosInstance
  from "../../services/axiosInstance"
 const PostList = () => {
@@ -18,7 +17,6 @@ const PostList = () => {
   const navigate = useNavigate()
   const getData = async () => {
     try {
-      // setLoading(true)
       // const url = "https://jsonplaceholder.typicode.com/posts"
       const db_url = "/posts/db/"
       const response = await axiosInstance.get(db_url)

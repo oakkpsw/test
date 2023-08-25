@@ -25,9 +25,7 @@ const PostDetail = () => {
   const [dialogSuccess, setDialogSuccess] = useState(true)
   const getData = async (id: number) => {
     try {
-      // setLoading(true)
       const db_url = "posts/db/post-with-user/"
-      // const url = "https://jsonplaceholder.typicode.com/posts/"
       const response = await axiosInstance.get(db_url + id)
       setPost(response.data)
     } catch (error) {
@@ -38,17 +36,14 @@ const PostDetail = () => {
   
 
   const handleDelete = async (id: number) => {
-    //  event.preventDefault()
     // const url = `https://jsonplaceholder.typicode.com/posts/${id}`
     const db_url = `posts/db/${id}`
-    //  const data = { ...formData }
     try {
       const response = await axiosInstance.delete(db_url)
       if (response.status === 200) {
         setDialogMessage("Post deleted successfully.")
         setDialogSuccess(true)
         setOpenDialog(true)
-        //  navigate('/posts')
       }
     } catch (error) {
       console.error("Error deleteing post:", error)
@@ -56,7 +51,6 @@ const PostDetail = () => {
       setDialogSuccess(false)
       setOpenDialog(true)
     }
-    //  console.log(data)
   }
   const handleCloseDialog = () => {
     setOpenDialog(false)

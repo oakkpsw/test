@@ -75,11 +75,8 @@ const LoginPage = () => {
               variant="outlined"
               fullWidth
               margin="normal"
-              //   value={credentials.username}
               {...register("email")}
-              //   onChange={(e) =>
-              //     setCredentials({ ...credentials, username: e.target.value })
-              //   }
+  
             />
             <TextField
               label="Password"
@@ -87,11 +84,8 @@ const LoginPage = () => {
               variant="outlined"
               fullWidth
               margin="normal"
-              //   value={credentials.password}
               {...register("password")}
-              //   onChange={(e) =>
-              //     setCredentials({ ...credentials, password: e.target.value })
-              //   }
+          
             />
             <Button type="submit" variant="contained" color="primary" fullWidth>
               Login

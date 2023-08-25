@@ -19,8 +19,8 @@ async function seed() {
           suite: user.address.suite,
           city: user.address.city,
           zipcode: user.address.zipcode,
-          geo_lat: user.address.geo.lat, // Replace with actual latitude value
-          geo_lng: user.address.geo.lng, // Replace with actual longitude value
+          geo_lat: user.address.geo.lat,
+          geo_lng: user.address.geo.lng,
           company_name: user.company.name,
           catchPhrase: user.company.catchPhrase,
           bs: user.company.bs,

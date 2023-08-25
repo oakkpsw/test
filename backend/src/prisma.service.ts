@@ -4,10 +4,8 @@ import { PrismaClient } from '@prisma/client';
 @Injectable()
 export class PrismaService extends PrismaClient implements OnModuleInit {
   async onModuleInit() {
-    // await this.$connect();
     try {
       await this.$connect();
-      // const data = await prisma.$queryRaw`SELECT 1`;
     } catch (error) {
       // log error
       console.log(error);
